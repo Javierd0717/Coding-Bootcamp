@@ -1,0 +1,100 @@
+Last login: Sun Feb 12 15:24:21 on ttys000
+marienegron@Maries-iMac ~ % pwd
+/Users/marienegron
+marienegron@Maries-iMac ~ % mkdir learn_git_again
+marienegron@Maries-iMac ~ % cd learn_git_again
+marienegron@Maries-iMac learn_git_again % touch third.txt
+marienegron@Maries-iMac learn_git_again % git init
+Initialized empty Git repository in /Users/marienegron/learn_git_again/.git/
+marienegron@Maries-iMac learn_git_again % git add third.txt
+marienegron@Maries-iMac learn_git_again % git commit-m "adding third.txt"
+git: 'commit-m' is not a git command. See 'git --help'.
+
+The most similar command is
+	commit-tree
+marienegron@Maries-iMac learn_git_again % git commit -m "adding third.txt"
+[master (root-commit) c4a4fe8] adding third.txt
+ Committer: Marie Negron <marienegron@Maries-iMac.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 third.txt
+marienegron@Maries-iMac learn_git_again % git log
+commit c4a4fe891c8677496c968d9474b01d1853425c37 (HEAD -> master)
+Author: Marie Negron <marienegron@Maries-iMac.local>
+Date:   Tue Feb 14 18:26:08 2023 -0500
+
+    adding third.txt
+marienegron@Maries-iMac learn_git_again % touch fourth.txt
+marienegron@Maries-iMac learn_git_again % git commit -m "adding fourth.txt"
+On branch master
+Untracked files:
+	fourth.txt
+
+nothing added to commit but untracked files present
+marienegron@Maries-iMac learn_git_again % git add fourth.txt
+marienegron@Maries-iMac learn_git_again % git commit -m "adding fourth.txt"
+[master 39bd2bb] adding fourth.txt
+ Committer: Marie Negron <marienegron@Maries-iMac.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fourth.txt
+marienegron@Maries-iMac learn_git_again % rm third.txt
+marienegron@Maries-iMac learn_git_again % git add third.txt
+marienegron@Maries-iMac learn_git_again % git commit -m "removing third.txt"
+[master f0cd467] removing third.txt
+ Committer: Marie Negron <marienegron@Maries-iMac.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 third.txt
+marienegron@Maries-iMac learn_git_again % git log
+commit f0cd46718efb4dfbb0d256013a22c5e155420aa2 (HEAD -> master)
+Author: Marie Negron <marienegron@Maries-iMac.local>
+Date:   Tue Feb 14 18:29:28 2023 -0500
+
+    removing third.txt
+
+commit 39bd2bb02620015c17ae94479fadb32f2abc993e
+Author: Marie Negron <marienegron@Maries-iMac.local>
+Date:   Tue Feb 14 18:28:37 2023 -0500
+
+    adding fourth.txt
+
+commit c4a4fe891c8677496c968d9474b01d1853425c37
+Author: Marie Negron <marienegron@Maries-iMac.local>
+Date:   Tue Feb 14 18:26:08 2023 -0500
+
+    adding third.txt
+marienegron@Maries-iMac learn_git_again % git config --global core.pager "cat"
+marienegron@Maries-iMac learn_git_again % git config --global --list
+core.pager=cat
+marienegron@Maries-iMac learn_git_again %
